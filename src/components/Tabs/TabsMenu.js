@@ -11,6 +11,7 @@ import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 
 import BusinessIcon from "@mui/icons-material/Business";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import ContactCard from "../Contacts/ContactCard";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -65,7 +66,7 @@ const menuItems = [
     text: "Contacts",
     icon: <ContactsIcon />,
     link: "/a",
-    content: "ccc",
+    content: <ContactCard/>,
   },
   {
     id: "4",
