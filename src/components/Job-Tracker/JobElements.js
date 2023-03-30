@@ -27,24 +27,6 @@ const JobElements = ({jobTitle, company}) => {
       </Box>
 </Stack></Card>
     
-
-    //   {/* <Box>
-    //   <Grid container >
-        
-    
-    //     <Grid item xs={2}>
-    //         <Typography variant="h3" color="initial">
-    //     Job title
-    //   </Typography>
-    //   <Typography variant="h4" color="initial">
-    //     Company
-    //   </Typography>
-    //     </Grid>
-    //     <Grid item xs={6}>
-    //     <HorizontalLinearStepper />
-    //     </Grid>
-    //   </Grid>
-    // </Box> */}
   );
 };
 

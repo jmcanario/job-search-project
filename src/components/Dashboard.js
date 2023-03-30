@@ -1,3 +1,4 @@
+import { Height } from "@mui/icons-material";
 import { Box, Container, Grid } from "@mui/material";
 import React from "react";
 import JobTracker from "./Job-Tracker/JobTracker";
@@ -6,22 +7,19 @@ import TabsMenu from "./Tabs/TabsMenu";
 
 const Dashboard = () => {
   return (
-    <Container maxWidth="lg" style={{paddingTop:'30px', backgroundColor:'white'}}>
-       
-      
-      
-      {/* <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2} columns={12}>
-        <Grid item xs={4}>
-            <Menu />
-        </Grid>
-        <Grid item xs={8}>
-        <JobTracker />
-        </Grid>
-      </Grid>
-    </Box> */}
-   <TabsMenu /> </Container>
-    
+    <Grid
+  container
+  spacing={0}
+  direction="column"
+  alignItems="center"
+  justifyContent="center"
+  style={{ minHeight: '100vh' }}
+>
+    <Container maxWidth="lg" style={{paddingTop:'30px', backgroundColor:'white'}} >       
+   
+   <TabsMenu /> 
+   </Container>
+    </Grid>
   );
 };
 

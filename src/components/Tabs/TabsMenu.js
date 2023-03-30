@@ -99,7 +99,8 @@ const TabsMenu = () => {
 
       {menuItems.map((menuItem) => {
         return (
-          <TabPanel value={value} index={menuItem.id - 1} key={menuItem.id}>
+          <TabPanel value={value} index={menuItem.id - 1} key={menuItem.id} style=          
+          {{height:'500px'}}>
             {menuItem.content}
           </TabPanel>
         );

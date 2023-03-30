@@ -10,6 +10,11 @@ const themeColor = createTheme({
     backgroundImage: {
       default: "blue",
     },
+    direction:"column",
+  alignItems:"center",
+  justifyContent:"center"
+   ,
+    display: 'grid'
   },
 });
 
@@ -17,8 +22,8 @@ function App() {
   return (
     <ThemeProvider theme={themeColor}>
       <CssBaseline />
-
-      <Dashboard />
+{/* <Menu /> */}
+      <Dashboard style={{ minHeight: '100vh'}} />
     </ThemeProvider>
   );
 }
