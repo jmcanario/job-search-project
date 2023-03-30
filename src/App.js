@@ -8,7 +8,7 @@ import Dashboard from "./components/Dashboard";
 const themeColor = createTheme({
   palette: {
     backgroundImage: {
-      default: "white",
+      default: "blue",
     },
   },
 });
