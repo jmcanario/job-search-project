@@ -4,14 +4,15 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Contacts, Phone } from "@mui/icons-material";
-import ContactsIcon from "@mui/icons-material/Contacts";
-import JobTracker from "../Job-Tracker/JobTracker";
-import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 
+import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import ContactsIcon from "@mui/icons-material/Contacts";
 import BusinessIcon from "@mui/icons-material/Business";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import JobTracker from "../Job-Tracker/JobTracker";
 import ContactList from "../Contacts/ContactList";
+
+import menuItems from '../../db/Dummy_menu'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,36 +47,36 @@ function a11yProps(index) {
   };
 }
 
-const menuItems = [
-  {
-    id: "1",
-    text: "Job tracker",
-    icon: <WorkHistoryIcon />,
-    link: "/b",
-    content: <JobTracker />,
-  },
-  {
-    id: "2",
-    text: "Companies",
-    icon: <BusinessIcon />,
-    link: "/companies",
-    content: "bbbb",
-  },
-  {
-    id: "3",
-    text: "Contacts",
-    icon: <ContactsIcon />,
-    link: "/a",
-    content: <ContactList/>,
-  },
-  {
-    id: "4",
-    text: "Calendar / Events",
-    icon: <CalendarMonthIcon />,
-    link: "/events",
-    content: "",
-  },
-];
+// const menuItems = [
+//   {
+//     id: "1",
+//     text: "Job tracker",
+//     icon: <WorkHistoryIcon />,
+//     link: "/b",
+//     content: <JobTracker />,
+//   },
+//   {
+//     id: "2",
+//     text: "Companies",
+//     icon: <BusinessIcon />,
+//     link: "/companies",
+//     content: "bbbb",
+//   },
+//   {
+//     id: "3",
+//     text: "Contacts",
+//     icon: <ContactsIcon />,
+//     link: "/a",
+//     content: <ContactList/>,
+//   },
+//   {
+//     id: "4",
+//     text: "Calendar / Events",
+//     icon: <CalendarMonthIcon />,
+//     link: "/events",
+//     content: "",
+//   },
+// ];
 
 const TabsMenu = () => {
   const [value, setValue] = React.useState(0);

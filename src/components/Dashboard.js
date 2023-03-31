@@ -1,8 +1,5 @@
-import { Height } from "@mui/icons-material";
 import { Box, Container, Grid } from "@mui/material";
 import React from "react";
-import JobTracker from "./Job-Tracker/JobTracker";
-import Menu from "./Menu/Menu";
 import TabsMenu from "./Tabs/TabsMenu";
 
 const Dashboard = () => {

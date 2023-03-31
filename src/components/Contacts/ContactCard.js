@@ -31,13 +31,10 @@ const ContactCard = ({name, skills, job, phone}) => {
 <p>
 
 {skills}
-{/* <Chip label='Design'/>
-<Chip label='Frontend'/>
-<Chip label='Recruiter'/> */}
+
 </p>
 
-{/* <Divider />
-<Box sx={{textAlign:'end'}}> */}
+
 
 <Accordion>
         <AccordionSummary
@@ -47,11 +44,11 @@ const ContactCard = ({name, skills, job, phone}) => {
           sx={{flexGrow: 0, textAlign:'center'}}
        />
         <AccordionDetails>
-            {phone ? <Stack direction='row'><Phone color='secundary' /><span/>{phone} </Stack> :''  }
+            {phone ? <Stack direction='row'><Phone color='secundary' /><span/>{phone} </Stack> :'' }
         </AccordionDetails>
       </Accordion>
 
-{/* <ExpandMoreIcon /></Box> */}
+
 </CardContent>
     </Card>
   )

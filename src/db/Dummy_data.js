@@ -1,3 +1,4 @@
+
 const ContactDetails =[
     {
         name: 'Juan M. Armas',
@@ -17,4 +18,4 @@ const ContactDetails =[
     }
 ]
 
-export default ContactDetails
+  export default ContactDetails
