@@ -4,14 +4,14 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Phone } from "@mui/icons-material";
+import { Contacts, Phone } from "@mui/icons-material";
 import ContactsIcon from "@mui/icons-material/Contacts";
 import JobTracker from "../Job-Tracker/JobTracker";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
 
 import BusinessIcon from "@mui/icons-material/Business";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
-import ContactCard from "../Contacts/ContactCard";
+import ContactList from "../Contacts/ContactList";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -66,7 +66,7 @@ const menuItems = [
     text: "Contacts",
     icon: <ContactsIcon />,
     link: "/a",
-    content: <ContactCard/>,
+    content: <ContactList/>,
   },
   {
     id: "4",

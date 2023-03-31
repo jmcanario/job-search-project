@@ -19,7 +19,7 @@ const JobElements = ({jobTitle, company}) => {
       <Typography variant="h4" color="initial">
         {company}
       </Typography>
-      <Typography variant="h5" color="initial">
+      <Typography variant="subheading1" color="initial">
         {jobTitle}
       </Typography></Box>
       <Box xs={4}>
