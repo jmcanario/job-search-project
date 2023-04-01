@@ -4,7 +4,8 @@ import BusinessIcon from "@mui/icons-material/Business";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import JobTracker from "../components/Job-Tracker/JobTracker";
 import ContactList from "../components/Contacts/ContactList";
-import CompaniesCard from "../components/Companies/CompaniesCard";
+import CompaniesList from "../components/Companies/CompaniesList";
+import BasicDateTimePicker from "../components/Calendar/Calendar";
 
 const menuItems = [
     {
@@ -19,7 +20,7 @@ const menuItems = [
       text: "Companies",
       icon: <BusinessIcon />,
       link: "/companies",
-      content: <CompaniesCard />,
+      content: <CompaniesList />,
     },
     {
       id: "3",
@@ -33,7 +34,7 @@ const menuItems = [
       text: "Calendar / Events",
       icon: <CalendarMonthIcon />,
       link: "/events",
-      content: "",
+      content: <BasicDateTimePicker/>,
     },
   ];
 

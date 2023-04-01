@@ -13,7 +13,7 @@ import HorizontalLinearStepper from "./Stepper";
 const JobElements = ({jobTitle, company}) => {
   return (
     
-      <Card variant="outlined" sx={{padding: '15px'}}>
+      <Card variant="outlined" sx={{padding: '15px', margin:'15px'}}>
       <Stack direction="row" spacing={2}  justifyContent="space-around" >
         <Box xs={4}>
       <Typography variant="h4" color="initial">
