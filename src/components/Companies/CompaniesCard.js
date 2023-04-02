@@ -4,7 +4,7 @@ import LocationCityRoundedIcon from "@mui/icons-material/LocationCityRounded";
 import { Avatar, Card, Chip, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 
-const CompaniesCard = () => {
+const CompaniesCard = ({city, name, type, fields, address}) => {
   return (
     <Card
       variant="outlined"
@@ -18,31 +18,29 @@ const CompaniesCard = () => {
       }}
     >
       <Avatar
-        alt="CompaniesCard"
+        alt={name}
         src="/static/images/avatar/1.jpg"
         sx={{ width: 100, height: 100 }}
         gutterbottom
       />
 
       <Typography variant="h5" color="initial">
-        CompaniesCard
+    {name}
       </Typography>
       <Typography variant="subtitle1" color="initial">
-        CompaniesCard
+        {type}
       </Typography>
 
       <p>
-        <LocationCityRoundedIcon /> City
+        <LocationCityRoundedIcon /> {city}
       </p>
       <p>
         <LocationOnRoundedIcon color="primary" />
-        Location
+        {address}
       </p>
 
       <Stack direction="row">
-        <Chip label="tag1" />
-        <Chip label="tag1" />
-        <Chip label="tag1" />
+       <p>{fields}</p>
       </Stack>
     </Card>
   );

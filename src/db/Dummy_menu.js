@@ -11,7 +11,7 @@ const menuItems = [
     {
       id: "1",
       text: "Job tracker",
-      icon: <WorkHistoryIcon />,
+      icon: <WorkHistoryIcon alt="test avatar" />,
       link: "/b",
       content: <JobTracker />,
     },
