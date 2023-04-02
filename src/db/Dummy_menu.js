@@ -6,6 +6,9 @@ import JobTracker from "../components/Job-Tracker/JobTracker";
 import ContactList from "../components/Contacts/ContactList";
 import CompaniesList from "../components/Companies/CompaniesList";
 import BasicDateTimePicker from "../components/Calendar/Calendar";
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import Todo from '../components/Todo/Todo'
+import TodoWrapper from "../components/Todo/TodoWrapper";
 
 const menuItems = [
     {
@@ -35,6 +38,13 @@ const menuItems = [
       icon: <CalendarMonthIcon />,
       link: "/events",
       content: <BasicDateTimePicker/>,
+    },
+    {
+      id: "5",
+      text: "To do list",
+      icon: <CheckCircleIcon />,
+      link: "/events",
+      content: <TodoWrapper />,
     },
   ];
 
