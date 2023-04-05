@@ -15,7 +15,7 @@ const TodoWrapper = () => {
       ...todos,
       { id: uuidv4(), task: todo, completed: false, isEditing: false },
     ]);
-    console.log(todos);
+    
   };
   const toggleComplete= id => {
     setTodos(todos.map(todo => todo.id === id ?
