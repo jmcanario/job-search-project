@@ -4,35 +4,50 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import DateModal from './DateModal';
-
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
 
 
 export default function BasicDateTimePicker() {
   
-
-   const events= [
-      {
+const [date, setDate] = useState([
+  {
         id: 'a',
         title: 'my event',
-        start: '2023-04-01T16:30:00',
-        end: '2023-04-01T17:30',
+        start: '2023-04-01T17:30:00',
+        end: '2023-04-01T19:30',
+      },
+  {
+        id: 'b',
+        title: 'my event',
+        start: '2023-04-05T17:30:00',
+        end: '2023-04-05T19:30',
+      },
+  {
+        id: 'c',
+        title: 'my event',
+        start: '2023-04-07',
+        end: '2023-04-07',
       }
-    ]
+])
+  //  const events= [
+      
+  //   ]
 
   //  const handleDate = ()=>{
   //   events.push({id:'', title: {newTitle}, start: {newDate}})
   //  }
-  // const [date, setDate] = useState('')
+  // const [newDate, setNewDate] = useState('')
 
-  // const NewDate = () =>{
-  //   newDate ={
-  //     id: uuidv4(),
-  //     title: 'new title',
-  //     start: ' start date',
-  //     end: 'end date'
-  //   },
-  //   setDate([...date, newDate]);
-  // }
+  function addNewDate (title, startTime, endTime) {
+   const addNewDate ={
+      id: uuidv4(),
+      title: title,
+      start: startTime,
+      end: endTime,
+    };
+    setDate([...date, addNewDate]);
+  }
   
   return (
     <>
@@ -45,9 +60,9 @@ export default function BasicDateTimePicker() {
         center: "title",
         end: "dayGridMonth,timeGridWeek,timeGridDay", 
       }}
-      events={events}
+      events={date}
   />
-  <DateModal />
+  <DateModal  addNewDate={addNewDate} start={date}/>
   </>
   );
 }

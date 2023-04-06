@@ -45,6 +45,7 @@ const menuItems = [
       link: "/events",
       content: <TodoWrapper />,
     },
+  
   ];
 
   export default menuItems
