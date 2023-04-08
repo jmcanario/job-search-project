@@ -61,7 +61,7 @@ const ContactCard = ({ name, skills, job, phone }) => {
         <Typography variant="subtitle1" color="initial">
           {job}
         </Typography>
-        <p>{skills}</p>
+        <span>{skills}</span>
 
         <Accordion>
           <AccordionSummary
