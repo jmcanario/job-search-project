@@ -11,7 +11,7 @@ const Menu = () => {
 
 
   return (
-    <div>
+    <>
      {menuItems}
      <Box sx={{ width: '100%', height: 56,  bgcolor: 'grey' }}>
         <Stack direction="row" alignItems="center" style={{ color: "white" }}>    
@@ -26,7 +26,7 @@ const Menu = () => {
           })}
         </Stack>
       </Box>
-    </div>
+    </>
   );
 };
 

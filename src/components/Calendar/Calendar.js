@@ -10,25 +10,32 @@ import { useState } from "react";
 
 export default function BasicDateTimePicker() {
   
-const [date, setDate] = useState([
+const [event, setEvent] = useState([
   {
         id: 'a',
-        title: 'my event',
+        title: 'A date',
         start: '2023-04-01T17:30:00',
         end: '2023-04-01T19:30',
       },
   {
         id: 'b',
-        title: 'my event',
-        start: '2023-04-05T17:30:00',
-        end: '2023-04-05T19:30',
+        title: 'B date',
+        start: '2023-04-07T17:30:00',
+        end: '2023-04-07T19:30',
       },
   {
         id: 'c',
-        title: 'my event',
-        start: '2023-04-07',
-        end: '2023-04-07',
-      }
+        title: 'C date',
+        start: '2023-04-03T17:30:00',
+        end: '2023-04-03T19:30',
+      },
+  {
+        id: 'c',
+        title: 'C date',
+        start: '2023-04-21',
+        // start: '16:00',
+        // end: '17:00',
+      },
 ])
   //  const events= [
       
@@ -38,19 +45,37 @@ const [date, setDate] = useState([
   //   events.push({id:'', title: {newTitle}, start: {newDate}})
   //  }
   // const [newDate, setNewDate] = useState('')
-
-  function addNewDate (title, startTime, endTime) {
-   const addNewDate ={
+  uuidv4();
+ 
+  
+  function addNewDate (title, startDate, endDate){  
+    
+   
+    
+    const newEvent = {
       id: uuidv4(),
       title: title,
-      start: startTime,
-      end: endTime,
-    };
-    setDate([...date, addNewDate]);
-  }
-  
+      start: startDate,
+      end: endDate
+    }
+   
+    
+  setEvent([
+    ...event, newEvent
+])
+
+console.log(title)
+console.log(startDate)
+console.log(endDate) 
+console.log (event)
+
+
+      };
+    
+    
   return (
     <>
+    
     <FullCalendar
     plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin ]}
     initialView="dayGridMonth"
@@ -60,9 +85,10 @@ const [date, setDate] = useState([
         center: "title",
         end: "dayGridMonth,timeGridWeek,timeGridDay", 
       }}
-      events={date}
+      events={event}
   />
-  <DateModal  addNewDate={addNewDate} start={date}/>
+  <DateModal  addNewDate={addNewDate} event={event} />
+  
   </>
   );
-}
+  }

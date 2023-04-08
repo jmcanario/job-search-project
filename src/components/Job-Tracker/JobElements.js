@@ -21,7 +21,8 @@ const JobElements = ({jobTitle, company}) => {
       </Typography>
       <Typography variant="subheading1" color="initial">
         {jobTitle}
-      </Typography></Box>
+      </Typography>
+      </Box>
       <Box xs={4}>
       <HorizontalLinearStepper xs={4} />
       </Box>

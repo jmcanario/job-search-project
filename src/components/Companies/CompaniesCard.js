@@ -31,16 +31,16 @@ const CompaniesCard = ({city, name, type, fields, address}) => {
         {type}
       </Typography>
 
-      <p>
+      <span>
         <LocationCityRoundedIcon /> {city}
-      </p>
-      <p>
+      </span>
+      <span>
         <LocationOnRoundedIcon color="primary" />
         {address}
-      </p>
+      </span>
 
       <Stack direction="row">
-       <p>{fields}</p>
+       <span>{fields}</span>
       </Stack>
     </Card>
   );

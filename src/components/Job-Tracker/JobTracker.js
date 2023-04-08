@@ -25,7 +25,7 @@ const JobTracker = () => {
     {/* JobTracker */}
     <Box sx={{ width: '100%', height: 400 }}>
       {dummyJobs.map((job) => {
-            return <JobElements company={job.company} jobTitle={job.jobTitle} />
+            return <JobElements company={job.company} jobTitle={job.jobTitle} key={job.id} />
           })} 
     </Box></>
   )

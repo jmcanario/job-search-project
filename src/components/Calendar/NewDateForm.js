@@ -8,7 +8,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import dayjs from "dayjs";
 import React, { useState } from "react";
 import customParseFormat from "dayjs/plugin/customParseFormat";
-import "dayjs/locale/en-gb";
+// import "dayjs/locale/en-gb"; --- you can add a language (in this caes en-gb = british english) by adding this line and  dayjs.locale("en-gb");
 
 const style = {
   position: "absolute",
@@ -22,7 +22,7 @@ const style = {
   p: 4,
 };
 
-const NewDateForm = ({ addNewDate }) => {
+const NewDateForm = ( {addNewDate}, props) => {
   const [endTime, setEndTime] = useState("");
   const [startTime, setStartTime] = useState("");
   const [date, setDate] = useState("");
@@ -33,26 +33,28 @@ const NewDateForm = ({ addNewDate }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTitle("");
-    setStartTime("");
-    setEndTime("");
-    setDate("");
+    // setStartTime("");
+    // setEndTime("");
+    // setDate("");
+    // const startDate= {date}+'T'+{startTime};
+    // const endDate= {date}+'T'+{endTime};
+    props.addNewDate = {
+        title
+     } 
+        
   };
-  // (e)=>{
-  //            e.preventDefault();
-  //            setDate('');
-  //         //    setStartTime('');
-  //         //    setEndTime('');
-  //            props.addNewDate ();}
-  // setDate(e.target.value)
-  // onChange={(e) => console.log(dayjs(e).format())
-  //   direction={"column"}
-  dayjs.locale("en-gb");
-//   console.log(date);
-//   console.log(startTime);
-//   console.log(endTime);
-//   dayjs.extend(customParseFormat);
+  
+ console.log(handleSubmit)
+// const [formData, setFormData] = useState({
+//     title: title,
+//     start: date,
+//     end: date
+//   });
 
-//   console.log(dayjs(date));
+//   const handleFormSubmit = (e) => {
+//     e.preventDefault();
+//     handleSubmit(formData);
+//   }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -92,7 +94,7 @@ const NewDateForm = ({ addNewDate }) => {
             />
           </Stack>
         </LocalizationProvider>
-        <Button onClick={addNewDate}>Add event</Button>
+        <Button type='submit'>Add event</Button>
       </Stack>
     </form>
   );
