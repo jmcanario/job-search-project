@@ -1,2 +1,3 @@
 1. In calendar, when press the button the form array do not add to the first time. 
 Either the new events update.
+I try to add a key, but I do not how.
