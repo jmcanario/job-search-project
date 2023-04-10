@@ -46,6 +46,7 @@ export default function DateModal({ addNewDate }) {
     setEndTime("");
     setDate("");
   };
+  
 
   return (
     <>

@@ -9,8 +9,10 @@ import { useState } from "react";
 
 
 export default function BasicDateTimePicker() {
-  
+ 
+
 const [event, setEvent] = useState([
+  
   {
         id: 'a',
         title: 'A date',
@@ -30,21 +32,13 @@ const [event, setEvent] = useState([
         end: '2023-04-03T19:30',
       },
   {
-        id: 'c',
-        title: 'C date',
-        start: '2023-04-21',
-        // start: '16:00',
-        // end: '17:00',
+        id: 'd',
+        title: 'D date',
+        start: '2023-04-21T17:30:00',
+        end: '18:00',
       },
 ])
-  //  const events= [
-      
-  //   ]
 
-  //  const handleDate = ()=>{
-  //   events.push({id:'', title: {newTitle}, start: {newDate}})
-  //  }
-  // const [newDate, setNewDate] = useState('')
   uuidv4();
  
   
@@ -57,8 +51,9 @@ const [event, setEvent] = useState([
       end: endDate
     }   
   setEvent([
-    ...event, newEvent, 
-])
+    ...event, newEvent
+]);
+
 console.log(title)
 console.log(startDate)
 console.log(endDate) 
@@ -74,6 +69,7 @@ console.log (event)
     <>
     
     <FullCalendar
+     
     plugins={[ dayGridPlugin, timeGridPlugin, interactionPlugin ]}
     initialView="dayGridMonth"
     height={400}
