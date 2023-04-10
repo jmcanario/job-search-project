@@ -48,31 +48,28 @@ const [event, setEvent] = useState([
   uuidv4();
  
   
-  function addNewDate (title, startDate, endDate){  
-    
-   
-    
+  function addNewDate (title, startDate, endDate){     
+      
     const newEvent = {
       id: uuidv4(),
       title: title,
       start: startDate,
       end: endDate
-    }
-   
-    
+    }   
   setEvent([
-    ...event, newEvent
+    ...event, newEvent, 
 ])
-
 console.log(title)
 console.log(startDate)
 console.log(endDate) 
 console.log (event)
-
-
       };
+
+
     
-    
+ 
+
+
   return (
     <>
     
@@ -87,7 +84,7 @@ console.log (event)
       }}
       events={event}
   />
-  <DateModal  addNewDate={addNewDate} event={event} />
+  <DateModal  addNewDate={addNewDate}  />
   
   </>
   );
