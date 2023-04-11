@@ -13,7 +13,7 @@ const Menu = () => {
   return (
     <>
      {menuItems}
-     <Box sx={{ width: '100%', height: 56,  bgcolor: 'grey' }}>
+     <Box sx={{ width: 'auto', height: 56,  bgcolor: 'grey' }}>
         <Stack direction="row" alignItems="center" style={{ color: "white" }}>    
           {menuItems.map((menuItem) => {
             return (              

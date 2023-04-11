@@ -50,15 +50,14 @@ const [event, setEvent] = useState([
       start: startDate,
       end: endDate
     }   
-  setEvent([
-    ...event, newEvent
-]);
 
-console.log(title)
-console.log(startDate)
-console.log(endDate) 
-console.log (event)
-      };
+    const newEvents = [
+      ...event, newEvent
+    ];
+    // console.log (newEvents)
+    
+    setEvent(newEvents);
+    };
 
 
     

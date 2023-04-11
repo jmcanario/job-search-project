@@ -91,6 +91,7 @@ const TabsMenu = () => {
         <Tabs
           value={value}
           onChange={handleChange}
+          allowScrollButtonsMobile
         >
           {menuItems.map((menuItem) => {
             return <Tab {...a11yProps(menuItem.id)} icon={menuItem.icon} key={menuItem.id} label={menuItem.text} aria-label={menuItem.text}/>;

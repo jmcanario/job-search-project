@@ -1,4 +1,4 @@
-import { Box, Container, Grid } from "@mui/material";
+import { Container, Grid } from "@mui/material";
 import React from "react";
 import TabsMenu from "./Tabs/TabsMenu";
 
@@ -15,7 +15,7 @@ const Dashboard = () => {
     <Container maxWidth="lg" style={{paddingTop:'30px', backgroundColor:'white'}} >       
    
    <TabsMenu /> 
-   </Container>
+   </Container >
     </Grid>
   );
 };
