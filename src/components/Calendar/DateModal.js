@@ -42,11 +42,14 @@ export default function DateModal({ addNewDate }) {
     const endDate = date + "T" + endTime;
     addNewDate(title, startDate, endDate);
     // setTitle("");
-    // setStartTime("");
-    // setEndTime("");
-    // setDate("");
+    // setStartTime(dayjs().hour());
+    // setEndTime(dayjs().hour());
+    // setDate(dayjs().hour());
   };
+   
   
+  // console.log(date =>(dayjs().format("DD-MM-YYYY")) )
+
 
   return (
     <>
@@ -71,6 +74,7 @@ export default function DateModal({ addNewDate }) {
               />
               <DatePicker
                 label="Date"
+                defaultValue={dayjs()}
                 value={dayjs(date, "YYYY-MM-DD", "en-gb")}
                 onChange={(e) => setDate(dayjs(e).format("YYYY-MM-DD"))}
                 format="DD-MM-YYYY"
