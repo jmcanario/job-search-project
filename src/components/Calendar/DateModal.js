@@ -41,10 +41,10 @@ export default function DateModal({ addNewDate }) {
     const startDate = date + "T" + startTime;
     const endDate = date + "T" + endTime;
     addNewDate(title, startDate, endDate);
-    // setTitle("");
-    // setStartTime(dayjs().hour());
-    // setEndTime(dayjs().hour());
-    // setDate(dayjs().hour());
+    setTitle("");
+    setStartTime("");
+    setEndTime("");
+    setDate("");
   };
    
   
